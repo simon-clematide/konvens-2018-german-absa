@@ -2,7 +2,7 @@
 The make build system is used to for data preprocessing and running the experiments. See below.
 
 The script applies the following system and hyperparameters:
- - Adam Trainer
+ - Adam trainer
  - Ignore characters occurring less than 5 times
  - Use character-level word representation if occurring less than 3 times
  - character hidden layer dimensions: 32
@@ -13,11 +13,13 @@ The script applies the following system and hyperparameters:
 
 
 ### Official XML data is in directory data
-  - train_v1.4.xml (Official training set)
+  - train_v1.4.xml (official training set)
   - dev_v1.4.xml (official development set)
   - test_TIMESTAMP1.xml (synchronic test set 1)
   - test_TIMESTAMP2.xml (diachronic test set 2)
- 
+  - test_TIMESTAMP1.tsv (synchronic test set 1 used for Task C evaluation)
+  - test_TIMESTAMP2.tsv (diachronic test set 2 used for Task C evaluation)
+
 
 ### Test data output for Task C and D as reported in https://www.oeaw.ac.at/fileadmin/subsites/academiaecorpora/PDF/konvens18_04.pdf
   - Task D
