@@ -75,7 +75,7 @@ There are two variants of all data sets (recognizable by their file extension)
 ```sh
 # make sure you have dynet >= 2 under Python 2.7 available
 # checkout repository
-git clone --recursive  git@gitlab.cl.uzh.ch:siclemat/dynet-german-aspect-2017.git dynet-german-aspect-2017-test
+git clone --recursive  git clone https://github.com/simon-clematide/konvens-2018-german-absa
 
 # create cpenn representation
 make cpenn
