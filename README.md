@@ -23,7 +23,7 @@ The script applies the following system and hyperparameters:
 
 
 ### Test data output for Task C and D as reported in KONVENS paper
-  - Task C A (using aspect aspect only for training; not that test data have default negative aspect sentiment):
+  - Task C A (using aspect aspect only for training; note that test data have negative aspect sentiment as dummy default):
     - konvens2018_results/TaskC_A/00__testset1-evalin.tsv
     - konvens2018_results/TaskC_A/00__testset2-evalin.tsv
 
