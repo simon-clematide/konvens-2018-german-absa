@@ -22,7 +22,7 @@ The script applies the following system and hyperparameters:
   - test_TIMESTAMP2.tsv (diachronic test set 2 used for Task C evaluation)
 
 
-### Test data output for Task C and D as reported in https://www.oeaw.ac.at/fileadmin/subsites/academiaecorpora/PDF/konvens18_04.pdf
+### Test data output for Task C and D as reported in KONVENS paper
   - Task C A (using aspect aspect only for training; not that test data have default negative aspect sentiment):
     - konvens2018_results/TaskC_A/00__testset1-evalin.tsv
     - konvens2018_results/TaskC_A/00__testset2-evalin.tsv
