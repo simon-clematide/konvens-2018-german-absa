@@ -1,12 +1,13 @@
 # Dynet biLSTM tutorial tagger for ABSA
 The make build system is used to for data preprocessing and running the experiments. See below.
+[Paper](publication/konvens_short_paper.pdf) and [Poster](publication/konvens-poster.pdf) are included in the repo.
 
 The script applies the following system and hyperparameters:
  - Adam trainer
  - Ignore characters occurring less than 5 times
  - Use character-level word representation if occurring less than 3 times
  - character hidden layer dimensions: 32
- - use dy.CoupledLSTMBuilder LSTM variant (https://dynet.readthedocs.io/en/latest/python_ref.html?highlight=CoupledLSTMBuilder#dynet.CoupledLSTMBuilder)
+ - use [dynet.CoupledLSTMBuilder  LSTM variant](https://dynet.readthedocs.io/en/latest/python_ref.html?highlight=CoupledLSTMBuilder#dynet.CoupledLSTMBuilder)
  - word hidden layer dimensions: 64 per LSTM (128 in biLSTM)
  - no dropout, no noise addition
  - MLP hidden layer size 128; no regularization
@@ -72,7 +73,8 @@ Call: ```python lib/absaxml2tsv.py < data/test_TIMESTAMP2.xml > data/test_TIMEST
 15540-122-129   erfasst Sicherheit:negative Sonstige_Unregelmässigkeiten:negative
 15540-130-136   worden  O
 15540-137-140   T_T     O
-15540-0-0       __D__   O``
+15540-0-0       __D__   O
+```
 
 #### Penn-like POS tagger input format for tutorial tagger (one document = one "sentence")
 There are two variants of all data sets (recognizable by their file extension)
@@ -81,14 +83,14 @@ There are two variants of all data sets (recognizable by their file extension)
  - cspenn: Combined aspect and sentiment tags A:S.
 
 ### Step-by-Step Howto
-```sh
+
+```
 # make sure you have dynet >= 2 under Python 2.7 available
 # checkout repository
 git clone --recursive  git clone https://github.com/simon-clematide/konvens-2018-german-absa
 
 # create cpenn representation
 make cpenn
-
 
 # Experimente starten und und N=24 Modelle trainieren (zahl kann beliebig gesetzt werden innerhalb der auf der Maschine verfügbaren Kerne)
 # Start training and apply the models with the best devset performance to the test set. The number at the end indicates how many models will be built (in parallel).
@@ -105,5 +107,18 @@ make cspenn
 make do-cspenn-experiment-24
 make do-cspenn-experiment-eval
 
- 
+```
+
+## How to cite
+
+```
+@inproceedings{Clematide:2018,
+	Address = {Vienna, Austra},
+	Author = {Simon Clematide},
+	Booktitle = {PROCEEDINGS of the 14th Conference on Natural Language Processing (KONVENS 2018)},
+	Editor = {Adrien Barbaresi and Hanno Biber and Friedrich Neubarth and Rainer Osswald},
+	Month = {sep},
+	Pages = {29-33},
+	Title = {A Simple and Effective biLSTM Approach to Aspect-Based Sentiment Analysis in Social Media Customer Feedback},
+	Year = {2018}}
 ```
